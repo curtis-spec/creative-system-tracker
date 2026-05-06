@@ -391,7 +391,7 @@ dd {
 .metric-row {
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 12px;
   padding: 12px;
 }
@@ -491,6 +491,11 @@ textarea {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
+input[type='radio'] {
+  width: auto;
+  accent-color: var(--aqua);
+}
+
 select {
   color-scheme: dark;
 }
@@ -539,6 +544,204 @@ legend {
   grid-template-columns: minmax(0, 1fr) 360px;
   gap: 24px;
   align-items: start;
+}
+
+.calendar-layout {
+  grid-template-columns: minmax(0, 1fr) 420px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.button-row button,
+.archive-toolbar button,
+.text-button {
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(191, 238, 255, 0.3);
+  border-radius: 999px;
+  background: rgba(231, 251, 255, 0.14);
+  color: var(--ink);
+  font-weight: 800;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.button-row.compact button {
+  min-height: 34px;
+  padding: 0 12px;
+  font-size: 0.86rem;
+}
+
+.ghost-button.danger {
+  border-color: rgba(255, 159, 159, 0.42);
+  color: #ffd6d6;
+}
+
+.mini-calendar {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 22px;
+}
+
+.mini-calendar button,
+.text-button {
+  display: grid;
+  width: 100%;
+  min-height: auto;
+  gap: 5px;
+  padding: 13px 14px;
+  border-radius: 18px;
+  text-align: left;
+}
+
+.mini-calendar button.active,
+.text-button.active {
+  border-color: rgba(124, 231, 255, 0.76);
+  background: rgba(124, 231, 255, 0.18);
+}
+
+.mini-calendar span,
+.text-button span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.library-layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.lesson-panel,
+.action-grid article,
+.archive-grid article {
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.055)),
+    var(--glass);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 18px 50px rgba(0, 15, 29, 0.24);
+  color: var(--ink);
+  backdrop-filter: blur(18px);
+}
+
+.lesson-panel {
+  padding: 24px;
+}
+
+.video-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(213, 245, 255, 0.18);
+  border-radius: 24px;
+  background: rgba(0, 0, 0, 0.28);
+  aspect-ratio: 16 / 9;
+}
+
+.video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.lesson-summary {
+  margin: 18px 0;
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+
+.reading-panel {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 24px;
+  padding: 18px;
+  border: 1px solid rgba(213, 245, 255, 0.14);
+  border-radius: 22px;
+  background: rgba(239, 253, 255, 0.07);
+}
+
+.reading-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.quiz-form {
+  display: grid;
+  gap: 16px;
+}
+
+.quiz-form fieldset {
+  display: grid;
+  gap: 10px;
+}
+
+.choice-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.action-grid article,
+.archive-grid article {
+  padding: 20px;
+}
+
+.action-grid h3,
+.archive-grid h3 {
+  margin: 0 0 10px;
+  color: var(--ink-strong);
+}
+
+.action-grid p,
+.archive-grid p {
+  color: var(--muted);
+}
+
+.archive-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.archive-grid span,
+.archive-grid small {
+  color: var(--aqua);
+  font-weight: 800;
+}
+
+.report-preview {
+  margin-top: 18px;
+}
+
+.mentor-metrics {
+  margin-bottom: 20px;
 }
 
 .auth-screen {
@@ -632,6 +835,9 @@ legend {
   .metric-row,
   .two-column,
   .split-layout,
+  .calendar-layout,
+  .library-layout,
+  .action-grid,
   .rubric {
     grid-template-columns: 1fr;
   }

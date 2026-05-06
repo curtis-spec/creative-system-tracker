@@ -4,6 +4,8 @@ function Dashboard({
   dailyLogs,
   weeklyCheckpoints,
   finalDemo,
+  calendarEvents = [],
+  quizAttempts = [],
 }) {
   const finalStatus = finalDemo?.status?.replace('_', ' ') ?? 'not started'
 
@@ -53,6 +55,14 @@ function Dashboard({
         <article>
           <strong>{finalStatus}</strong>
           <span>Final demonstration status</span>
+        </article>
+        <article>
+          <strong>{calendarEvents.length}</strong>
+          <span>Calendar events scheduled</span>
+        </article>
+        <article>
+          <strong>{quizAttempts.length}</strong>
+          <span>Video Bible tests submitted</span>
         </article>
       </section>
 

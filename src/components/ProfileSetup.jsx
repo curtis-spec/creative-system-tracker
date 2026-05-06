@@ -44,6 +44,17 @@ function ProfileSetup({ profile, onSave }) {
           />
         </label>
         <label>
+          App role
+          <select
+            value={form.role ?? 'intern'}
+            onChange={(event) => updateField('role', event.target.value)}
+          >
+            <option value="intern">Intern</option>
+            <option value="mentor">Mentor</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
+        <label>
           Development focus
           <input
             value={form.development_focus ?? ''}
