@@ -50,3 +50,21 @@ npm run dev
 npm run build
 npm run lint
 ```
+
+## Desktop App
+
+This project also runs as an Electron desktop app.
+
+```bash
+npm run desktop
+```
+
+That launches the React app inside a native desktop window.
+
+To create a packaged desktop build:
+
+```bash
+npm run build:desktop
+```
+
+Packaged app output is written to `release/`.
