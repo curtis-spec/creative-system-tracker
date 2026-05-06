@@ -1,12 +1,15 @@
 # Creative System Tracker
 
-A React + Vite internal onboarding tracker for interns learning a creative operating system.
+A web-based React + Vite internal onboarding tracker for interns learning a creative operating system.
 
 ## What It Tracks
 
 - Intern profile, mentor, start date, development focus, and growth goal
 - Daily learning logs
 - Weekly checkpoints
+- Onboarding calendar events and reminders
+- Video Bible lessons with 5-question knowledge checks
+- Saved archive, printable reports, exports, and slide-deck style summaries
 - Final demonstration evidence, status, mentor notes, and rubric scores
 - Readiness score based on completed logs, checkpoints, and final demonstration fields
 
@@ -50,21 +53,3 @@ npm run dev
 npm run build
 npm run lint
 ```
-
-## Desktop App
-
-This project also runs as an Electron desktop app.
-
-```bash
-npm run desktop
-```
-
-That launches the React app inside a native desktop window.
-
-To create a packaged desktop build:
-
-```bash
-npm run build:desktop
-```
-
-Packaged app output is written to `release/`.
