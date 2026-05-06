@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react'
-import { videoBibleSections } from '../data/videoBible'
+import { howWeOperateSections } from '../data/howWeOperate'
 
-function VideoBible({ attempts, onSubmit }) {
-  const [activeId, setActiveId] = useState(videoBibleSections[0].id)
+function HowWeOperate({ attempts, onSubmit }) {
+  const [activeId, setActiveId] = useState(howWeOperateSections[0].id)
   const [answers, setAnswers] = useState({})
 
-  const activeSection = videoBibleSections.find((section) => section.id === activeId)
+  const activeSection = howWeOperateSections.find((section) => section.id === activeId)
   const latestAttempts = useMemo(() => {
     return attempts.reduce((lookup, attempt) => {
       const current = lookup[attempt.section_id]
@@ -42,9 +42,9 @@ function VideoBible({ attempts, onSubmit }) {
   return (
     <section className="library-layout">
       <aside className="history-panel">
-        <h2>Video Bible</h2>
+        <h2>How We Operate</h2>
         <ul>
-          {videoBibleSections.map((section) => {
+          {howWeOperateSections.map((section) => {
             const attempt = latestAttempts[section.id]
             return (
               <li key={section.id}>
@@ -68,16 +68,8 @@ function VideoBible({ attempts, onSubmit }) {
 
       <div className="lesson-panel">
         <div className="section-heading">
-          <p className="eyebrow">Onboarding lesson</p>
+          <p className="eyebrow">Operating documentation</p>
           <h2>{activeSection.title}</h2>
-        </div>
-        <div className="video-frame">
-          <iframe
-            src={activeSection.videoUrl}
-            title={activeSection.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
         </div>
         <p className="lesson-summary">{activeSection.summary}</p>
         <div className="reading-panel">
@@ -117,4 +109,4 @@ function VideoBible({ attempts, onSubmit }) {
   )
 }
 
-export default VideoBible
+export default HowWeOperate

@@ -10,7 +10,7 @@ import FinalDemonstration from './components/FinalDemonstration'
 import MentorDashboard from './components/MentorDashboard'
 import ProfileSetup from './components/ProfileSetup'
 import Reports from './components/Reports'
-import VideoBible from './components/VideoBible'
+import HowWeOperate from './components/HowWeOperate'
 import WeeklyCheckpoint from './components/WeeklyCheckpoint'
 
 const STORAGE_KEY = 'creative-system-tracker-demo'
@@ -542,7 +542,7 @@ function App() {
         onSave={handleFinalDemoSave}
       />
     ),
-    bible: <VideoBible attempts={quizAttempts} onSubmit={handleQuizSubmit} />,
+    bible: <HowWeOperate attempts={quizAttempts} onSubmit={handleQuizSubmit} />,
     archive: <Archive trackerData={trackerData} />,
     reports: <Reports trackerData={trackerData} />,
     mentor: (
@@ -585,7 +585,7 @@ function App() {
           ['calendar', 'Calendar'],
           ['weekly', 'Weekly Checkpoint'],
           ['final', 'Final Demonstration'],
-          ['bible', 'Video Bible'],
+          ['bible', 'How We Operate'],
           ['archive', 'Archive'],
           ['reports', 'Reports'],
           ['mentor', 'Mentor View'],

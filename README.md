@@ -8,7 +8,7 @@ A web-based React + Vite internal onboarding tracker for interns learning a crea
 - Daily learning logs
 - Weekly checkpoints
 - Onboarding calendar events and reminders
-- Video Bible lessons with 5-question knowledge checks
+- How We Operate lessons with 5-question knowledge checks
 - Saved archive, printable reports, exports, and slide-deck style summaries
 - Final demonstration evidence, status, mentor notes, and rubric scores
 - Readiness score based on completed logs, checkpoints, and final demonstration fields

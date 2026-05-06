@@ -60,7 +60,7 @@ export function flattenTrackerData(data) {
 
   data.quizAttempts.forEach((attempt) => {
     rows.push({
-      type: 'Video Bible Quiz',
+      type: 'How We Operate Quiz',
       date: attempt.completed_at,
       title: attempt.section_title,
       status: `${attempt.score}/${attempt.total_questions}`,
@@ -167,7 +167,7 @@ export function buildSlideDeckHtml(data) {
     <p>Daily logs: ${data.dailyLogs.length}</p>
     <p>Weekly checkpoints: ${data.weeklyCheckpoints.length}</p>
     <p>Calendar events: ${data.calendarEvents.length}</p>
-    <p>Video Bible quiz attempts: ${data.quizAttempts.length}</p>
+    <p>How We Operate quiz attempts: ${data.quizAttempts.length}</p>
   </section>
   <section>
     <h2>Evidence Highlights</h2>

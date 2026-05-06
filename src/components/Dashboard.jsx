@@ -62,7 +62,7 @@ function Dashboard({
         </article>
         <article>
           <strong>{quizAttempts.length}</strong>
-          <span>Video Bible tests submitted</span>
+          <span>How We Operate tests submitted</span>
         </article>
       </section>
 

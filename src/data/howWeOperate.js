@@ -1,9 +1,8 @@
-export const videoBibleSections = [
+export const howWeOperateSections = [
   {
     id: 'promise',
     title: 'Team Promise',
     duration: '8 min',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     summary:
       'The team promise explains what the creative system protects: clear ownership, steady communication, reliable handoffs, and work that can move without guesswork.',
     reading: [
@@ -67,7 +66,6 @@ export const videoBibleSections = [
     id: 'ownership',
     title: 'Ownership Clarity',
     duration: '10 min',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     summary:
       'Ownership clarity defines who is responsible, who approves, who contributes, and who needs to be informed.',
     reading: [
@@ -131,7 +129,6 @@ export const videoBibleSections = [
     id: 'workflow',
     title: 'Workflow Movement',
     duration: '12 min',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     summary:
       'Workflow movement covers intake, assignment, production, feedback, revision, approval, and delivery.',
     reading: [
@@ -195,7 +192,6 @@ export const videoBibleSections = [
     id: 'feedback',
     title: 'Feedback Applied',
     duration: '9 min',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
     summary:
       'Feedback applied means the intern can receive notes, identify the decision behind them, revise clearly, and document what changed.',
     reading: [

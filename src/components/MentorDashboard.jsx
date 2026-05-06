@@ -1,4 +1,4 @@
-import { videoBibleSections } from '../data/videoBible'
+import { howWeOperateSections } from '../data/howWeOperate'
 
 function MentorDashboard({ profile, trackerData, teamRecords }) {
   const latestBySection = trackerData.quizAttempts.reduce((lookup, attempt) => {
@@ -9,7 +9,7 @@ function MentorDashboard({ profile, trackerData, teamRecords }) {
     return lookup
   }, {})
 
-  const completedLessons = videoBibleSections.filter(
+  const completedLessons = howWeOperateSections.filter(
     (section) => latestBySection[section.id]?.passed,
   ).length
 
@@ -25,8 +25,8 @@ function MentorDashboard({ profile, trackerData, teamRecords }) {
           <span>Readiness score</span>
         </article>
         <article>
-          <strong>{completedLessons}/{videoBibleSections.length}</strong>
-          <span>Video Bible lessons passed</span>
+          <strong>{completedLessons}/{howWeOperateSections.length}</strong>
+          <span>How We Operate lessons passed</span>
         </article>
         <article>
           <strong>{trackerData.calendarEvents.length}</strong>
@@ -60,9 +60,9 @@ function MentorDashboard({ profile, trackerData, teamRecords }) {
           </dl>
         </section>
         <section className="recent-list">
-          <h2>Video Bible Progress</h2>
+          <h2>How We Operate Progress</h2>
           <ul>
-            {videoBibleSections.map((section) => {
+            {howWeOperateSections.map((section) => {
               const attempt = latestBySection[section.id]
               return (
                 <li key={section.id}>
